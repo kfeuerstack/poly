@@ -66,8 +66,6 @@ aside {
 }
 .navbar-default .navbar-header .navbar-brand {
   color: #F05F40;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700;
   text-transform: uppercase;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -149,8 +147,7 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center;
-  background-image: url('../img/map.jpg');
+  background-image: url('../img/gpsbg.jpg');
   text-align: center;
   color: white;
 }
@@ -203,7 +200,13 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
 }
+
+.login {
+  padding-top: 10%;
+}
+
 .cta {
+  padding-top: 30%;
 }
 .section-heading {
   margin-top: 0;
