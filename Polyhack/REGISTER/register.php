@@ -26,6 +26,16 @@
     {
         apologize("Password not confirmed!");
     }
+
+      else if (empty($_POST["firstName"]))
+    {
+        apologize("First name not provided!");
+    }
+    
+    else if (empty($_POST["lastName"]))
+    {
+        apologize("Last name not provided!");
+    }
     
     else if ($_POST["confirmation"] != $_POST["password"])
     {

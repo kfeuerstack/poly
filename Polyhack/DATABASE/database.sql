@@ -1,5 +1,5 @@
 --
--- Database: `pset7`
+-- Database: `GPSuser`
 --
 
 CREATE DATABASE IF NOT EXISTS `GPSuser`;
