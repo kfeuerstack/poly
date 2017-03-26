@@ -1,3 +1,49 @@
+<?php
+
+ini_set('display_errors', 'On');
+
+try {
+   $db = new PDO('mysql:host=localhost;dbname=sampleDB','Christopher','janelleyp00');
+
+}catch(PDOException $e) {
+   die('Error connecting to the DB.');
+}
+
+if(!empty($_POST)) {
+   $firstName = $_POST['firstName'];
+   $lastName = $_POST['lastName'];
+   $username = $_POST['username'];
+   $email = $_POST['email'];
+   $password = $_POST['password'];
+   $confirmation = $_POST['confirmation'];
+   $user = $db -> prepare("
+
+INSERT INTO sampleTable (firstName, lastName, username, email, password, confirmation)
+
+VALUES (:firstName, :lastName, :username, :email, :password, :confirmation)
+
+
+");
+
+$user -> execute([
+
+
+'firstName' => $firstName,
+'lastName' => $lastName,
+'username' => $username,
+'email' => $email,
+'password' => $password,
+'confirmation' => $confirmation
+
+]);
+    $success = true;
+    if($success) {
+        header('Location: login.html');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +125,7 @@
                 <div class="col-lg-6 text-center">
                     <h2>Register</h2>
                     
-                    <form >
+                    <form action="index.php" method="post">
                         <fieldset>
                             <div class="form-group">
                                 <input   required="required" class="form-control" id="firstName" name="firstName" placeholder="First Name" type="text" required="required">
