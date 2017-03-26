@@ -20,7 +20,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,30 +30,24 @@
     <![endif]-->
 </head>
 <body id="page-top">
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Hello John Doe!</a>
+            <a class="navbar-brand page-scroll" href="#page-top" onmouseover="potHoleHover();">Global Problem Solvers</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a class="page-scroll" href="#" onmouseover="somethingElse();">Log Out</a>
                 </li>
             </ul>
         </div>
@@ -62,35 +56,16 @@
     <!-- /.container-fluid -->
 </nav>
 
-<header>
-    <!--<div class="header-content">-->
+<div class="mapMain">
         <div class="border-right border-left">
-            <section id="map">
-                <div id="map1" style="height: 600px"></div>
-            </section>
+                <div id="map" style="height: 600px"></div>
         </div>
-    <!--</div>-->
-</header>
+</div>
 
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Let's Get In Touch!</h2>
-                <hr class="primary">
-                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-            </div>
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                <i class="fa fa-phone fa-3x sr-contact"></i>
-                <p>123-456-6789</p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- <div class="container">
+    <div class="row">
+        <
+ -->
 
 <!-- jQuery -->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -106,8 +81,9 @@
 <!-- Theme JavaScript -->
 <script src="js/creative.min.js"></script>
 <!-- Google maps -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxt73vrz6gs4l3V7LtIW2g7BNQDygtxzo"></script>
-<script src="js/googleMaps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl5lKY-gYDVHZcJj4BHx0WHIrgWf6WcnQ&callback=initMap"
+    async defer></script>
+    <script src="js/googleMaps.js"></script>
 </body>
 
 </html>

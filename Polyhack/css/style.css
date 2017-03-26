@@ -146,7 +146,7 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-image: url('../img/bgdark.jpg');
+  background-image: url('../img/blankmap.jpg');
   text-align: center;
   color: white;
 }
@@ -202,15 +202,20 @@ header .header-content .header-content-inner p {
 .login {
   padding-top: 10%;
 }
+img {
+  height:  auto;
+  width:  60%;
+}
 #about {
   height:  100%;
 }
 .cta {
-  padding-top: 30%;
+  padding-top: 5%;
 }
 .section-heading {
   margin-top: 0;
 }
+
 .service-box {
   max-width: 400px;
   margin: 50px auto 0;
@@ -365,4 +370,7 @@ body {
   background:  #212121;
   color: #eee;
   padding: 10px;
+}
+.mapMain {
+  padding-top: 50px;
 }
