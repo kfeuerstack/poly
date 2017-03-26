@@ -8,7 +8,7 @@ $password = $_POST['password'];
 while($rows = mysqli_fetch_assoc($sel_run)) { ?>
 <?php
 $count++;
-    if($username == $rows['username']) {
+    if($username == $rows['username'] && $password == $rows['password']) {
         header('Location: default.html');
     }
 ?>
