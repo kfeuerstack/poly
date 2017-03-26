@@ -50,9 +50,6 @@ p {
 section {
   padding: 100px 0;
 }
-aside {
-  padding: 50px 0;
-}
 .no-padding {
   padding: 0;
 }
@@ -202,12 +199,17 @@ header .header-content .header-content-inner p {
 .login {
   padding-top: 10%;
 }
-img {
+.loginLogo {
   height:  auto;
   width:  60%;
+  margin:  auto;
 }
 #about {
-  height:  100%;
+  height:  auto;
+}
+.frontLogo {
+  height:  auto;
+  width:  60%;
 }
 .cta {
   padding-top: 5%;
@@ -373,4 +375,10 @@ body {
 }
 .mapMain {
   padding-top: 50px;
+}
+.phone {
+  padding-bottom: 5%;
+}
+.iconKey {
+  padding: 5%;
 }
