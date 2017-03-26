@@ -38,7 +38,7 @@ $user -> execute([
 ]);
     $success = true;
     if($success) {
-        header('Location: login.html');
+        header('Location: login.php');
     }
 }
 
@@ -94,7 +94,7 @@ $user -> execute([
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="login.html">Login</a>
+                        <a href="login.php">Login</a>
                     </li>
                 </ul>
             </div>

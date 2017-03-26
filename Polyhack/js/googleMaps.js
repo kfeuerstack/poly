@@ -116,6 +116,7 @@
     let latlng = new google.maps.LatLng(-34.397, 150.644);
     let mapOptions = {
         zoom: 9,
+        scrollwheel: false,
         center: latlng,
         styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
     };
@@ -129,15 +130,91 @@
         placeMarker(event.latLng);
     });
 
+    let iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    let icons = {
+        parking: {
+            icon: iconBase + 'parking_lot_maps.png'
+        },
+        library: {
+            icon: iconBase + 'library_maps.png'
+        },
+        info: {
+            icon: iconBase + 'info-i_maps.png'
+        }
+    };
 
-    function placeMarker(location) {
+    function placeMarker(feature) {
         let marker = new google.maps.Marker({
-            position: location,
+            // position: location,
+            position: feature.position,
             map: map1
         });
     }
-        map1.setCenter(location);
+let features = [
+    {
+        position: new google.maps.LatLng(-33.91721, 151.22630),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91539, 151.22820),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91747, 151.22912),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91910, 151.22907),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91725, 151.23011),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91872, 151.23089),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91784, 151.23094),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91682, 151.23149),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91790, 151.23463),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91666, 151.23468),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.916988, 151.233640),
+        type: 'info'
+    }, {
+        position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
+        type: 'parking'
+    }, {
+        position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+        type: 'parking'
+    }, {
+        position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
+        type: 'parking'
+    }, {
+        position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
+        type: 'parking'
+    }, {
+        position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
+        type: 'parking'
+    }, {
+        position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
+        type: 'parking'
+    }, {
+        position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
+        type: 'parking'
+    }, {
+        position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+        type: 'library'
+    }
+];
 
+for (let i = 0, feature; feature = features[i]; i++) {
+    placeMarker(feature);
+}
+        map1.setCenter(location);
 
 function codeAddress(map1,address,city,state) {
 
