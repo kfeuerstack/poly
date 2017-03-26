@@ -12,26 +12,26 @@
             {"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
             {"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
         });
-    var image = 'http://i.imgur.com/OARp0jw.png';
-        var pothole = new google.maps.Marker({
+    let image = 'http://i.imgur.com/OARp0jw.png';
+        let pothole = new google.maps.Marker({
           position: {lat: 28.154364, lng: -81.846410},
           map: map,
           icon: image
         });
-    // var image = 'http://i.imgur.com/hR0nZah.png';
+    // let image = 'http://i.imgur.com/hR0nZah.png';
     //     var brokenGlass = new google.maps.Marker({
     //       position: {lat: 28.144233, lng:  -81.845050},
     //       map: map,
     //       icon: image
     //     });
-    // var image = 'http://i.imgur.com/Gh3vu9m.png';
-    //     var brokenLight = new google.maps.Marker({
+    // let image = 'http://i.imgur.com/Gh3vu9m.png';
+    //     let brokenLight = new google.maps.Marker({
     //       position: {lat: 28.144280, lng:  -81.857528},
     //       map: map,
     //       icon: image
     //     });
-    //  var image = 'http://i.imgur.com/SKu3hus.png';
-    //     var roadKill = new google.maps.Marker({
+    //  let image = 'http://i.imgur.com/SKu3hus.png';
+    //     let roadKill = new google.maps.Marker({
     //       position: {lat: 28.152303, lng:   -81.872753},
     //       map: map,
     //       icon: image
@@ -41,9 +41,9 @@
         placeMarker(event.latLng);
         });       
 
-        google.maps.event.addListener(map, 'click', function(event) {
-        placeMarkerPothole(event.latLng);
-        });  
+        // google.maps.event.addListener(map, 'click', function(event) {
+        // placeMarkerPothole(event.latLng);
+        // });
 
         // --- ROADKILL ---
         function placeMarker(location) {

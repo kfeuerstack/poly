@@ -1,4 +1,19 @@
-
+<?php
+include 'db.php';
+$sel         = "SELECT * FROM sampleTable";
+$sel_run     = mysqli_query($conn, $sel);
+$count       = 1;
+$username = $_POST['username'];
+$password = $_POST['password'];
+while($rows = mysqli_fetch_assoc($sel_run)) { ?>
+<?php
+$count++;
+    if($username == $rows['username']) {
+        header('Location: default.html');
+    }
+?>
+<!--<a href="#" class="list-group-item list-group-item-success"><strong>--><?php // echo $rows['firstName'],' -'; ?><!--</strong> --><?php //echo $rows['lastName']; ?><!--</a>-->
+<?php } ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +79,7 @@
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <img src="img/login.jpg" alt="GPS logo">
                     <h1></h1>
-                    <form action="register.php" method="post">
+                    <form action="login.php" method="post">
                         <fieldset>                    
                             <div class="form-group">
                                 <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
